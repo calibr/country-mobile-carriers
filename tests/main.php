@@ -4,18 +4,13 @@ require "./CountryMobileCarriers.php";
 
 class CountryMobileCarriersTest extends PHPUnit_Framework_TestCase
 {
-  public function testGetForRU() {
+  public function testGetList() {
     $carriers = CountryMobileCarriers::getList("RU");
-    $this->assertArraySubset([
-      "Baykalwestcom",
-      "Beeline",
-      "INDIGO",
-      "MOTIV",
-      "MTS",
-      "MegaFon",
-      "Skylink",
-      "Tele2",
-      "Yota"
-    ], $carriers);
+    $carrier = $carriers[0];
+    var_dump($carrier);
+    $this->assertInternalType("string", $carrier["name"]);
+    $this->assertInternalType("int", $carrier["mcc"]);
+    $this->assertInternalType("int", $carrier["mnc"]);
+    $this->assertCount(22, $carriers);
   }
 }

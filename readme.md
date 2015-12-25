@@ -13,37 +13,19 @@ $carriers = CountryMobileCarriers::getList("RU");
 /**
  * carriers array will look like this:
  * [
- *     "Baykalwestcom",
- *     "Beeline",
- *     "INDIGO",
- *     "MOTIV",
- *     "MTS",
- *     "MegaFon",
- *     "Skylink",
- *     "Tele2",
- *     "Yota"
- *   ]
- */
-
-$allCarriers = CountryMobileCarriers::getAll();
-
-/**
- * allCarriers array will look like this:
- * [ "RU" => [
- *     "Baykalwestcom",
- *     "Beeline",
- *     "INDIGO",
- *     "MOTIV",
- *     "MTS",
- *     "MegaFon",
- *     "Skylink",
- *     "Tele2",
- *     "Yota"
- *   ]
- *  ...
+ *   [
+ *     "name" => "Baykal Westcom",
+ *     "mcc" => 250,
+ *     "mnc" => 12
+ *   ],
+ *   ...
  * ]
  */
 
+// returns whole database as array, key is country code, value is list of carriers
+// in same format as in getList
+$allCarriers = CountryMobileCarriers::getAll();
+
 ```
 
-Database is taken from https://www.ip2location.com/mobile-carrier-coverage.
+Database is taken from http://mcc-mnc.com/.
