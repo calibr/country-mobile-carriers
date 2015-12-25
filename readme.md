@@ -25,6 +25,25 @@ $carriers = CountryMobileCarriers::getList("RU");
  *   ]
  */
 
+$allCarriers = CountryMobileCarriers::getAll();
+
+/**
+ * allCarriers array will look like this:
+ * [ "RU" => [
+ *     "Baykalwestcom",
+ *     "Beeline",
+ *     "INDIGO",
+ *     "MOTIV",
+ *     "MTS",
+ *     "MegaFon",
+ *     "Skylink",
+ *     "Tele2",
+ *     "Yota"
+ *   ]
+ *  ...
+ * ]
+ */
+
 ```
 
 Database is taken from https://www.ip2location.com/mobile-carrier-coverage.

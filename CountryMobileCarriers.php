@@ -17,4 +17,8 @@ class CountryMobileCarriers {
     }
     return $db[$country];
   }
+
+  public static function getAll() {
+    return self::_getDB();
+  }
 }
