@@ -26,3 +26,5 @@ $carriers = CountryMobileCarriers::getList("RU");
  */
 
 ```
+
+Database is taken from https://www.ip2location.com/mobile-carrier-coverage.
